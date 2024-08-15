@@ -1,0 +1,32 @@
+{
+    "english": "English",
+    "arabic": "Arabic",
+    "time":"Select time",
+    "details":"Task details",
+    "title":"Task Title",
+    "edit":"Edit Task",
+    "app-title":"To Do List",
+    "delete":"Delete",
+    "edit-s":"Edit",
+    "save":"Save Changes",
+    "dark": "Dark",
+    "done": "Done!!",
+    "home": "Home",
+    "task-d": "Task Description",
+    "add-task": "Add Task",
+    "error": "Error Occurred",
+    "error-n": "No Tasks",
+    "add-title": "Add New Task",
+    "task-t": "Task Title",
+    "light": "Light",
+    "theme": "Theme",
+    "language": "language",
+    "select_theme":"Select Theme",
+    "select_language":"Select Language",
+    "settings-navigation":"Settings"
+
+
+
+  
+
+  }
