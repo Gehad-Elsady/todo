@@ -1,9 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:todo/Taps/setting_tap.dart';
 import 'package:todo/Taps/tasks_tap.dart';
 import 'package:todo/add_task_bottom_sheet.dart';
+import 'package:todo/firebase_functions.dart';
+import 'package:todo/login-page.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = 'HomePage';
@@ -23,6 +24,15 @@ class _HomePageState extends State<HomePage> {
       extendBody: true,
       appBar: AppBar(
         title: Text('app-title'.tr()),
+        actions: [
+          IconButton(
+            onPressed: () {
+              FirebaseFunctions.signOut();
+              Navigator.pushReplacementNamed(context, LoginPage.routeName);
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(

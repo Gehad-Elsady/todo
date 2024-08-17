@@ -23,7 +23,19 @@
     "language": "language",
     "select_theme":"Select Theme",
     "select_language":"Select Language",
-    "settings-navigation":"Settings"
+    "settings-navigation":"Settings",
+    "login":"Login",
+    "signup":"Sign Up",
+    "name":"Name",
+    "age":"Age",
+    "phone":"Phone",
+    "email":"Email",
+    "password":"Password",
+    "h-acc":"have an account?  ",
+    "e-email":"Enter Your Email",
+    "e-password":"Enter Your Password",
+    "d-acc":"Don't have an account? "
+
 
 
 

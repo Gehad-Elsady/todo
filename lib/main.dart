@@ -5,7 +5,9 @@ import 'package:provider/provider.dart';
 import 'package:todo/app-theme.dart';
 import 'package:todo/firebase_options.dart';
 import 'package:todo/home.dart';
+import 'package:todo/login-page.dart';
 import 'package:todo/my_provider.dart';
+import 'package:todo/signup-page.dart';
 import 'package:todo/updatetask.dart';
 
 void main() async {
@@ -51,10 +53,12 @@ class MyApp extends StatelessWidget {
         theme: AppTheming.LightTheme,
         darkTheme: AppTheming.DarckTheme,
         debugShowCheckedModeBanner: false,
-        initialRoute: HomePage.routeName,
+        initialRoute: LoginPage.routeName,
         routes: {
           HomePage.routeName: (context) => HomePage(),
           UpdateTask.routeName: (context) => UpdateTask(),
+          LoginPage.routeName: (context) => LoginPage(),
+          SignUpPage.routeName: (context) => SignUpPage()
         },
       );
     });
