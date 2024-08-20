@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:todo/taskmodel.dart';
-import 'package:todo/user-maode.dart';
+import 'package:todo/Models/taskmodel.dart';
+import 'package:todo/Models/user-model.dart';
 
 class FirebaseFunctions {
   static CollectionReference<TaskModel> getTasksCollection() {

@@ -1,8 +1,8 @@
 import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:todo/firebase_functions.dart';
-import 'package:todo/task_item.dart';
+import 'package:todo/Firebase/firebase_functions.dart';
+import 'package:todo/Widgets/task_item.dart';
 
 class TasksTap extends StatefulWidget {
   static const String routeName = 'TasksTap';

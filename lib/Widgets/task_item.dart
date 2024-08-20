@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/app-colors.dart';
-import 'package:todo/firebase_functions.dart';
-import 'package:todo/my_provider.dart';
-import 'package:todo/taskmodel.dart';
-import 'package:todo/updatetask.dart';
+import 'package:todo/Theme/app-colors.dart';
+import 'package:todo/Firebase/firebase_functions.dart';
+import 'package:todo/Providers/my_provider.dart';
+import 'package:todo/Models/taskmodel.dart';
+import 'package:todo/Screens/updatetask.dart';
 
 class TaskItem extends StatelessWidget {
   final TaskModel taskModel;

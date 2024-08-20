@@ -3,10 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/app-colors.dart';
-import 'package:todo/firebase_functions.dart';
-import 'package:todo/my_provider.dart';
-import 'package:todo/taskmodel.dart';
+import 'package:todo/Theme/app-colors.dart';
+import 'package:todo/Firebase/firebase_functions.dart';
+import 'package:todo/Providers/my_provider.dart';
+import 'package:todo/Models/taskmodel.dart';
 
 class AddTaskBottomSheet extends StatefulWidget {
   const AddTaskBottomSheet({super.key});

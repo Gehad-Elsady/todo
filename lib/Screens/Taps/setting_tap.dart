@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/app-colors.dart';
-import 'package:todo/language_bottomsheet.dart';
-import 'package:todo/my_provider.dart';
-import 'package:todo/theme_bottomsheet.dart';
+import 'package:todo/Theme/app-colors.dart';
+import 'package:todo/Bottom_Sheet/language_bottomsheet.dart';
+import 'package:todo/Providers/my_provider.dart';
+import 'package:todo/Bottom_Sheet/theme_bottomsheet.dart';
 
 class SettingTap extends StatelessWidget {
   static const String routeName = 'SettingTap';

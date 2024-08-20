@@ -2,13 +2,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/app-theme.dart';
-import 'package:todo/firebase_options.dart';
-import 'package:todo/home.dart';
-import 'package:todo/login-page.dart';
-import 'package:todo/my_provider.dart';
-import 'package:todo/signup-page.dart';
-import 'package:todo/updatetask.dart';
+import 'package:todo/Theme/app-theme.dart';
+import 'package:todo/Firebase/firebase_options.dart';
+import 'package:todo/Screens/home.dart';
+import 'package:todo/Auth/login-page.dart';
+import 'package:todo/Providers/my_provider.dart';
+import 'package:todo/Auth/signup-page.dart';
+import 'package:todo/Screens/updatetask.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

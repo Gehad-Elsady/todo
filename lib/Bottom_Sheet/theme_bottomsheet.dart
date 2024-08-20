@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/app-colors.dart';
-import 'package:todo/my_provider.dart';
+import 'package:todo/Theme/app-colors.dart';
+import 'package:todo/Providers/my_provider.dart';
 
 class ThemeBottomSheet extends StatelessWidget {
   const ThemeBottomSheet({super.key});

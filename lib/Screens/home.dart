@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:todo/Taps/setting_tap.dart';
-import 'package:todo/Taps/tasks_tap.dart';
-import 'package:todo/add_task_bottom_sheet.dart';
-import 'package:todo/firebase_functions.dart';
-import 'package:todo/login-page.dart';
+import 'package:todo/Screens/Taps/setting_tap.dart';
+import 'package:todo/Screens/Taps/tasks_tap.dart';
+import 'package:todo/Bottom_Sheet/add_task_bottom_sheet.dart';
+import 'package:todo/Firebase/firebase_functions.dart';
+import 'package:todo/Auth/login-page.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = 'HomePage';
