@@ -47,6 +47,9 @@ class AppTheming {
             borderRadius: BorderRadius.circular(30),
             side: BorderSide(color: Colors.white)),
         backgroundColor: Color(0xff5D9CEC),
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.black,
       ));
 
   ///////////////Darck Theme ///////////////////////////
@@ -93,5 +96,8 @@ class AppTheming {
             borderRadius: BorderRadius.circular(30),
             side: BorderSide(color: Color(0xff141922), width: 5)),
         backgroundColor: Color(0xff5D9CEC),
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.white,
       ));
 }

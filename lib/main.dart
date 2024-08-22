@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo/Providers/check-user.dart';
 import 'package:todo/Theme/app-theme.dart';
 import 'package:todo/Firebase/firebase_options.dart';
 import 'package:todo/Screens/home.dart';
@@ -31,6 +32,9 @@ void main() async {
           ChangeNotifierProvider(
             create: (context) => MyProvider(),
           ),
+          ChangeNotifierProvider(
+            create: (context) => CheckUser(),
+          ),
         ],
         child: const MyApp(),
       ),
@@ -44,6 +48,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var user = Provider.of<CheckUser>(context);
     return Consumer<MyProvider>(builder: (context, provider, child) {
       return MaterialApp(
         localizationsDelegates: context.localizationDelegates,
@@ -53,7 +58,9 @@ class MyApp extends StatelessWidget {
         theme: AppTheming.LightTheme,
         darkTheme: AppTheming.DarckTheme,
         debugShowCheckedModeBanner: false,
-        initialRoute: LoginPage.routeName,
+        initialRoute: user.firebaseUser != null
+            ? HomePage.routeName
+            : LoginPage.routeName,
         routes: {
           HomePage.routeName: (context) => HomePage(),
           UpdateTask.routeName: (context) => UpdateTask(),

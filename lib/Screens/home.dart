@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todo/Providers/check-user.dart';
 import 'package:todo/Screens/Taps/setting_tap.dart';
 import 'package:todo/Screens/Taps/tasks_tap.dart';
 import 'package:todo/Bottom_Sheet/add_task_bottom_sheet.dart';
@@ -20,10 +22,20 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var user = Provider.of<CheckUser>(context);
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
-        title: Text('app-title'.tr()),
+        title: Text.rich(TextSpan(
+          children: [
+            TextSpan(
+              text: 'app-title'.tr(),
+            ),
+            TextSpan(
+              text: ' ${user.userModel?.name}',
+            ),
+          ],
+        )),
         actions: [
           IconButton(
             onPressed: () {

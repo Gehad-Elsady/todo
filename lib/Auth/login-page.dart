@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo/Providers/check-user.dart';
 import 'package:todo/Theme/app-colors.dart';
 import 'package:todo/Firebase/firebase_functions.dart';
 import 'package:todo/Screens/home.dart';
@@ -16,6 +17,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
+    var user = Provider.of<CheckUser>(context);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -85,7 +87,9 @@ class LoginPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  FirebaseFunctions.Login(onSuccess: () {
+                  FirebaseFunctions.Login(onSuccess: () async {
+                    user.initUser();
+                    await Future.delayed(Duration(milliseconds: 500));
                     Navigator.pushReplacementNamed(context, HomePage.routeName);
                   }, onError: (e) {
                     showDialog(

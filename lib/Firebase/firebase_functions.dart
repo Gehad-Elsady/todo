@@ -117,9 +117,11 @@ class FirebaseFunctions {
     FirebaseAuth.instance.signOut();
   }
 
-  static Stream<List<String>> getUserNames() {
+  static Future<UserModel?> readUserData() async {
     var collection = getUserCollection();
-    return collection.snapshots().map(
-        (snapshot) => snapshot.docs.map((doc) => doc.data().name).toList());
+
+    DocumentSnapshot<UserModel> docUser =
+        await collection.doc(FirebaseAuth.instance.currentUser!.uid).get();
+    return docUser.data();
   }
 }
